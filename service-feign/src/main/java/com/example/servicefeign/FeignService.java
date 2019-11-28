@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * @author XuJD
  * @create 2019-11-26 11:13
  **/
-@FeignClient(value = "eureka-client1")
+@FeignClient(value = "eureka-client1",fallback = FeignServiceHystrix.class)
 @Service
 public interface FeignService {
 
