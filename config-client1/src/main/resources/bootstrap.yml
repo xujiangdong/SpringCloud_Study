@@ -11,6 +11,15 @@ spring:
         service-id: CONFIG-SERVER
       profile: tst
       name: config-tst
+    bus:
+      trace:
+        enabled: true
+
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
 
 eureka:
   instance:
@@ -18,3 +27,11 @@ eureka:
   client:
     service-url:
       defaultZone: http://localhost:8000/eureka/
+
+management:
+  endpoints:
+    bus-refresh:
+      enabled: true
+    web:
+      exposure:
+        include: 'refresh'
