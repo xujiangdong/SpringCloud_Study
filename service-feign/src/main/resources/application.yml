@@ -8,7 +8,7 @@ eureka:
 
 Spring:
   application:
-    name: service-feigin
+    name: service-feign
 
 feign:
   hystrix:
